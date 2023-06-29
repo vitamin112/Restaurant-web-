@@ -385,9 +385,9 @@ ul {
     color: #ff8243;
   }
   .header-btn.header-cart {
-    display: none;
+    margin-right: 14px;
   }
-  .header-btn {
+  .header-btn.header-user {
     margin: 0;
     margin-right: 70px;
   }
@@ -1913,4 +1913,14 @@ p {
   opacity: 1;
   transform: scale(1);
   transform: translateX(0);
+}
+
+.cart-item-image {
+  max-width: 150px;
+  height: 100px;
+}
+.cart-item-image img {
+  max-width: 150px;
+  height: 100px;
+  object-fit: cover;
 }
