@@ -1,6 +1,26 @@
 $(document).ready(function ($) {
   "use strict";
 
+  let btns = document.querySelectorAll(".cart-item .btn-close");
+  let cart = $("#cartModal .modal-body .container");
+  let total = $("#cartModal .total");
+
+  btns.forEach((item) => {
+    item.onclick = (e) => {
+      e.target.closest(".box").remove();
+      setTotal();
+    };
+  });
+
+  function setTotal() {
+    let prices = document.querySelectorAll(".cart-item .cart-item-text");
+    let array = [...prices];
+
+    let sum = array.reduce((sum, price) => +price.innerText + sum, 0);
+    if (sum == 0) cart.html("<p class='h1'>Order now!</p>");
+    total.text(sum);
+  }
+
   var book_table = new Swiper(".book-table-img-slider", {
     slidesPerView: 1,
     spaceBetween: 20,
