@@ -195,7 +195,7 @@ function isInViewport(el) {
   );
 }
 
-const box = document.querySelectorAll(".box");
+const box = document.querySelectorAll(".block");
 
 document.addEventListener(
   "scroll",

@@ -1896,16 +1896,16 @@ p {
 #viewport {
   scroll-behavior: smooth !important;
 }
-.box {
+.block {
   opacity: 0;
   transform: scale(0.5);
   transition: 0.2s linear;
   transition-delay: 0.1s;
 }
-.box.left-in {
+.block.left-in {
   transform: translateX(-100%);
 }
-.box.show {
+.block.show {
   opacity: 1;
   transform: scale(1);
 }
